@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Sign-In Section */
+#signInSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#signInForm {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#signInForm h1 {
+    margin-bottom: 20px;
+}
+
+#signInForm label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#signInForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#signInForm button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#signInForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Main Section */
+#mainSection {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Flex Containers */
+#formContainers {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.container {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    margin-top: 0;
+}
+
+#productInfo {
+    margin-bottom: 15px;
+}
+
+#productInfo p {
+    margin: 5px 0;
+}
+
+/* New Product Form */
+#newProductForm {
+    margin-bottom: 20px;
+}
+
+#newProductFormDetails label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#newProductFormDetails input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#photoPreview {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+/* Purchase Order Form */
+#purchaseOrderFormSection {
+    margin-bottom: 20px;
+}
+
+#purchaseOrderForm label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#purchaseOrderForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#purchaseOrderForm button {
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#purchaseOrderForm button:hover {
+    background-color: #218838;
+}

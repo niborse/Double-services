@@ -1,0 +1,136 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body.loading:before {
+    content: "Start scanning your items...";
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    width: 50%;
+    position: absolute;
+    top: 20px;
+    font-size: 3em;
+    font-weight: bold;
+    z-index: 100;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.camera-window {
+    flex: 1;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+}
+
+.camera-window video {
+    width: 100%;
+    height: auto;
+}
+
+.camera-window canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pos-system {
+    width: 50%;
+    background-color: rgba(85, 61, 61, 1);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.pos-system h2 {
+    margin-top: 0;
+}
+
+#posItemsList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align detected items to the left */
+    padding-left: 20px; /* Add padding to the left */
+}
+
+#posItemsList > div {
+    margin-bottom: 5px; /* Add spacing between items */
+    display: flex;
+    justify-content: space-between; /* Separate detected items and their prices */
+    width: 100%;
+}
+
+#posItemsList > div > span {
+    margin-left: auto; /* Move prices to the right */
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls button {
+    margin: 0 5px; /* Add padding between buttons */
+}
+
+.payment-methods {
+    margin-top: auto; /* Move to the bottom */
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+}
+
+.payment-methods button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+
+.total-amount {
+    margin-top: auto; /* Move to the bottom */
+    margin-left: 20px; /* Add padding to the left */
+
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Ensure it's above other elements */
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%); /* Center the modal */
+    width: 300px; /* Adjust width as needed */
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,198 @@
+python3 -m http.server 8000
+
+
+
+
+
+https for 
+nikhilborse@Nikhils-MacBook-Air pos_website_v4 % cd client 
+nikhilborse@Nikhils-MacBook-Air client % npm install -g http-server
+
+
+added 46 packages in 4s
+
+15 packages are looking for funding
+  run `npm fund` for details
+npm notice
+npm notice New minor version of npm available! 10.7.0 -> 10.8.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.8.1
+npm notice To update run: npm install -g npm@10.8.1
+npm notice
+nikhilborse@Nikhils-MacBook-Air client % openssl req -nodes -new -x509 -keyout server.key -out server.cert
+
+Generating a RSA private key
+.......................................+++++
+....................+++++
+writing new private key to 'server.key'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:IN
+State or Province Name (full name) [Some-State]:MAHARASHTRA
+Locality Name (eg, city) []:VIRAR
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:NB SUPPLY CHAIN
+Organizational Unit Name (eg, section) []:POS
+Common Name (e.g. server FQDN or YOUR name) []:NIKHIL BORSE
+Email Address []:nvborse1812@gmail.com
+nikhilborse@Nikhils-MacBook-Air client % http-server -S -C server.cert -K server.key
+
+Starting up http-server, serving ./ through https
+
+http-server version: 14.1.1
+
+http-server settings: 
+CORS: disabled
+Cache: 3600 seconds
+Connection Timeout: 120 seconds
+Directory Listings: visible
+AutoIndex: visible
+Serve GZIP Files: false
+Serve Brotli Files: false
+Default File Extension: none
+
+Available on:
+  https://127.0.0.1:8081
+  https://192.168.0.102:8081
+Hit CTRL-C to stop the server
+
+[Sun Jun 09 2024 13:43:14 GMT+0530 (India Standard Time)]  "GET /" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
+(node:53893) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[Sun Jun 09 2024 13:43:14 GMT+0530 (India Standard Time)]  "GET /index.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
+[Sun Jun 09 2024 13:43:14 GMT+0530 (India Standard Time)]  "GET /images/giphy.gif" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
+[Sun Jun 09 2024 13:43:14 GMT+0530 (India Standard Time)]  "GET /nblogoupdate.jpg" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
+[Sun Jun 09 2024 13:43:17 GMT+0530 (India Standard Time)]  "GET /images/roadcity.jpg" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
+[Sun Jun 09 2024 13:47:17 GMT+0530 (India Standard Time)]  "GET /mobile_camera.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
+[Sun Jun 09 2024 13:47:17 GMT+0530 (India Standard Time)]  "GET /favicon.ico" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
+[Sun Jun 09 2024 13:47:17 GMT+0530 (India Standard Time)]  "GET /favicon.ico" Error (404): "Not found"
+[Sun Jun 09 2024 14:02:59 GMT+0530 (India Standard Time)]  "GET /mobile_camera.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
+[Sun Jun 09 2024 15:09:23 GMT+0530 (India Standard Time)]  "GET /mobile_camera.html" "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/125.0.6422.80 Mobile/15E148 Safari/604.1"
+[Mon Jun 10 2024 20:29:45 GMT+0530 (India Standard Time)]  "GET /mobile_camera.html" "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/125.0.6422.80 Mobile/15E148 Safari/604.1"
+[Tue Jun 11 2024 15:34:22 GMT+0530 (India Standard Time)]  "GET /mobile_camera.html" "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/125.0.6422.80 Mobile/15E148 Safari/604.1"
+[Tue Jun 11 2024 18:52:09 GMT+0530 (India Standard Time)]  "GET /mobile_camera.html" "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/125.0.6422.80 Mobile/15E148 Safari/604.1"
+[Tue Jun 11 2024 20:19:55 GMT+0530 (India Standard Time)]  "GET /mobile_camera.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
+[Tue Jun 11 2024 20:19:55 GMT+0530 (India Standard Time)]  "GET /favicon.ico" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
+[Tue Jun 11 2024 20:19:55 GMT+0530 (India Standard Time)]  "GET /favicon.ico" Error (404): "Not found"
+[Tue Jun 11 2024 21:28:49 GMT+0530 (India Standard Time)]  "GET /mobile_camera.html" "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/125.0.6422.80 Mobile/15E148 Safari/604.1"
+[Tue Jun 11 2024 22:17:13 GMT+0530 (India Standard Time)]  "GET /mobile_camera.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/125 Version/11.1.1 Safari/605.1.15"
+nikhilborse@Nikhils-MacBook-Air pos_website_v4 % cd client
+nikhilborse@Nikhils-MacBook-Air client % http-server -S -C localhost+1.pem -K localhost+1-key.pem -p 8081 --cors
+
+
+
+
+
+
+o use ngrok, you need to sign up for an account, verify it, and set up an authentication token. Here’s how you can do it:
+
+Sign Up for ngrok Account:
+
+Go to the ngrok sign-up page and create an account.
+Get Your AuthToken:
+
+After signing up, go to the ngrok dashboard.
+Copy your authentication token.
+Install AuthToken:
+
+Open your terminal.
+
+Run the following command to add your authentication token:
+
+sh
+Copy code
+ngrok config add-authtoken <your-auth-token>
+Replace <your-auth-token> with the token you copied from the ngrok dashboard.
+
+Start ngrok with HTTPS:
+
+Now, you can start ngrok to create an HTTPS tunnel. Run the following command to expose your local server running on port 8080:
+
+sh
+Copy code
+ngrok http 8080
+This command will create an HTTPS tunnel to your local server and provide you with a public URL.
+
+Update Your Mobile HTML:
+
+Use the HTTPS URL provided by ngrok in your mobile HTML file. Here’s the updated version:
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Sender</title>
+</head>
+<body>
+    <h1>Send Message from Mobile</h1>
+    <textarea id="message" placeholder="Type your message"></textarea><br>
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            const message = document.getElementById('message').value;
+            fetch('https://your-ngrok-url/send', {  // Replace 'your-ngrok-url' with the actual HTTPS URL provided by ngrok
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                console.log('Message sent successfully');
+                // Optionally handle response from server
+            })
+            .catch(error => {
+                console.error('Error sending message:', error);
+            });
+        }
+    </script>
+</body>
+</html>
+Update Your Server Code:
+
+Ensure your server code listens on port 8080 and handles requests correctly. Here’s a simple example:
+javascript
+Copy code
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+const port = 8080;
+
+app.use(bodyParser.json());
+
+let messages = [];
+
+app.post('/send', (req, res) => {
+    const { message } = req.body;
+    messages.push(message);
+    console.log('Received message:', message);
+    res.status(200).send('Message received successfully');
+});
+
+app.get('/receive', (req, res) => {
+    res.json({ messages });
+    messages = [];
+});
+
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+Access the Mobile HTML Page:
+
+Open your mobile HTML page through GitHub Pages or any other hosting service, ensuring it uses the HTTPS URL provided by ngrok.
+This setup ensures that all communications between your mobile HTML page and the server are secure and avoids mixed content issues.
+
+which one 
+Web Interface                 http://127.0.0.1:4040                                                                                             
+Forwarding                    https://636a-150-107-182-200.ngrok-free.app -> http://localhost:8080    
