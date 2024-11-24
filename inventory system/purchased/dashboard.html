@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Inventory System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <button id="createOrderBtn">Create New Purchase Order</button>
+    </header>
+    <main>
+        <section id="purchaseOrders">
+            <h2>Latest Purchase Orders</h2>
+            <div id="ordersList"></div>
+            <div id="collectModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Collect Items for Order <span id="collectOrderNumber"></span></h2>
+                    
+                    <!-- For each product, assign bin locations and quantities -->
+                    <div id="collectProductList"></div>
+            
+                    <button id="saveInventoryBtn">Save and Store in Inventory</button>
+                </div>
+        </section>
+        
+
+    </main>
+    <script src="dashboard.js"></script>
+</body>
+</html>

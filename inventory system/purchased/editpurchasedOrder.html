@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Purchase Order - Inventory System</title>
+    <link rel="stylesheet" href="purchaseOrder.css">
+</head>
+<body>
+    <header>
+        <h1>Create Purchase Order</h1>
+    </header>
+    <main>
+        <form id="purchaseOrderForm">
+            <div class="form-section">
+                <label for="orderNumber">Purchase Order Number:</label>
+                <input type="text" id="orderNumber" name="orderNumber" readonly>
+                
+                <label for="orderDate">Date:</label>
+                <input type="date" id="orderDate" name="orderDate" required>
+            </div>
+
+            <div class="container">
+                <div class="left-container">
+                <h3>Vendor Information</h3>
+                <label for="vendorName">Vendor Name:</label>
+                <input type="text" id="vendorName" name="vendorName" required>
+
+                <label for="vendorLocation">Location:</label>
+                <input type="text" id="vendorLocation" name="vendorLocation" required>
+
+                <label for="vendorContact">Contact Details:</label>
+                <input type="text" id="vendorContact" name="vendorContact" required>
+            </div>
+
+            <div class="right-container">
+                <h3>Product Details</h3>
+                <div id="productDetailsContainer">
+                    <div class="product-entry">
+                        <div>
+                            <label for="productId1">Product ID:</label>
+                            <input type="text" id="productId1" name="productId1" class="productIdInput" list="productList1" required oninput="checkProductId(this)">
+                            <datalist id="productList1"></datalist>
+                            <div id="productDetails1" class="product-details"></div>
+                            <button type="button" class="createProductBtn" onclick="createNewProduct('productId1')">Create New Product</button>
+                        </div>
+                        
+
+                        <label for="quantity1">Quantity:</label>
+                        <input type="number" id="quantity1" name="quantity1" oninput="calculateSubtotal()" required>
+
+                        <label for="unitPrice1">Unit Price:</label>
+                        <input type="number" id="unitPrice1" name="unitPrice1"  oninput="calculateSubtotal()" required>
+
+                        <label for="discount1">Discount:</label>
+                        <input type="number" id="discount1" name="discount1" oninput="calculateSubtotal()" >
+
+                        <label for="subtotal1">Subtotal Cost:</label>
+                        <input type="number" id="subtotal1" name="subtotal1" readonly>
+                        
+                        <label for="location1">Warehouse Location:</label>
+                        <input type="text" id="location1" name="location1" required>
+
+                        <button type="button" class="removeProductBtn">Remove</button>
+                    </div>
+                </div>
+                <button type="button" id="addProductBtn">Add Another Product</button>
+            </div>
+
+            
+        </form>
+        
+        
+    </main>
+    <button type="submit" id="saveOrderBtn">Save and Raise Purchase Order</button>
+
+    
+    <script src="editPurchaseOrder.js"></script>
+</body>
+</html>

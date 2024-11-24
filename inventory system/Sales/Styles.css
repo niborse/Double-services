@@ -1,0 +1,138 @@
+/* styles.css */
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2F4F4F;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+#ordersContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.order {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.status {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.status.raised {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.status.confirmed {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.status.sent {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.status.transit {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.status.complete {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2F4F4F;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+}
+
+.product-entry {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.removeProductBtn {
+    background-color: #dc3545;
+}
+
+.removeProductBtn:hover {
+    background-color: #c82333;
+}
+.collected-order {
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.createSalesOrderBtn {
+    position: relative;
+    overflow: hidden; /* Ensure the link stays within bounds */
+    height: 50px; /* Adjust height as needed */
+}
+.animated-link {
+    position: absolute;
+    bottom: -100%; /* Start below the visible area */
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 24px; /* Adjust font size as needed */
+    color: #007BFF; /* Link color */
+    text-decoration: none;
+    transition: bottom 0.5s ease-in-out; /* Animation for bottom */
+}
+
+.link-container:hover .animated-link {
+    bottom: 0; /* Move to visible area on hover */
+}
+.delivered-order {
+    background-color: lightgreen;
+    color: darkgreen;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Dashboard</title>
+  <link rel="stylesheet" href="dashboard 2.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="dashboard 2.js"></script>
+</head>
+<body>
+  <div id="dashboard">
+    <!-- Summary Section -->
+    <div id="summary">
+      <h1>Inventory Management Dashboard</h1>
+      <div class="summary-item">Total Inventory: <span id="total-inventory">0</span></div>
+      <div class="summary-item">Total Sales: <span id="total-sales">$0</span></div>
+      <div class="summary-item">Pending Purchase Orders: <span id="pending-orders">0</span></div>
+    </div>
+
+    <!-- Search and Filter -->
+    <div id="search-filter">
+      <input type="text" id="search-bar" placeholder="Search by Product ID, Order Number...">
+      <select id="filter-status">
+        <option value="">All Status</option>
+        <option value="pending">Pending</option>
+        <option value="collected">Collected</option>
+        <option value="delivered">Delivered</option>
+      </select>
+    </div>
+
+    <!-- Data Table -->
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>Order Number</th>
+          <th>Product ID</th>
+          <th>Status</th>
+          <th>Quantity</th>
+          <th>Location</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamically populated rows -->
+      </tbody>
+    </table>
+
+    <!-- Graph Section -->
+    <div id="charts">
+      <h2>Inventory Chart</h2>
+      <canvas id="inventory-chart"></canvas>
+      <h2>Sales Trends Chart</h2>
+      <canvas id="sales-trends-chart"></canvas>
+    </div>
+  </div>
+</body>
+</html>

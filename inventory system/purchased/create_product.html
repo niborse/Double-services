@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create product ID - Inventory System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Create Purchase Order</h1>
+    </header>
+    <main>
+
+
+<form id="createProductForm">
+    <label for="productId">Product ID:</label>
+    <input type="text" id="productId" name="productId" required>
+
+    <label for="subGroup">Sub Group:</label>
+    <input type="text" id="subGroup" name="subGroup" required>
+
+    <label for="groupName">Group Name:</label>
+    <input type="text" id="groupName" name="groupName" required>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <label for="openingBalance">Opening Balance:</label>
+    <input type="number" id="openingBalance" name="openingBalance" required>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required>
+
+    <label for="binLocation">Bin Location:</label>
+    <input type="text" id="binLocation" name="binLocation" required>
+
+    <label for="photo">Upload Photo:</label>
+    <input type="file" id="photo" name="photo" accept="image/*">
+
+    <img id="photoPreview" alt="Photo Preview" style="display:none;"/>
+
+    <button type="submit">Save</button>
+</form>
+</main>
+<script src="create_product.js"></script>
+</body>
+</html>
+

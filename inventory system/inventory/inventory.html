@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management</title>
+  <link rel="stylesheet" href="inventory.css">
+</head>
+<body>
+    
+  <div class="container">
+    <h1>Inventory Stock Summary</h1>
+
+    <!-- Stock Summary Section -->
+    <div class="stock-summary-box">
+      <h2>Stock Summary</h2>
+      <table>
+        <div class="container">
+            <input type="text" class="search-input" id="searchInput" placeholder="🔍  Search inventory...">
+        </div>
+        <thead>
+          <tr>
+            <th class="sortable" data-column="productId" data-ascending="true">Product ID</th>
+            <th class="sortable" data-column="group" data-ascending="true">Group</th>
+            <th class="sortable" data-column="subgroup" data-ascending="true">Subgroup</th>
+            <th>Quantity</th>
+            <th>Warehouse Location</th>
+            <th>Bin Location</th>
+            <th>Bin Quantity</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="stockSummaryTable">
+          <!-- Dynamic rows will be added here -->
+        </tbody>
+      </table>
+      <button id="toggleFormButton" class="toggle-button">Add / Edit Product</button>
+    <!-- Form for Adding/Editing Products -->
+     <!-- The product form (initially hidden) -->
+<div id="productFormContainer" class="minimized">
+    <div id="productForm">
+      <h2 id="formTitle">Add New Product</h2>
+      <label for="productId">Product ID:</label>
+      <input type="text" id="productId">
+      <label for="group">Group:</label>
+      <input type="text" id="group">
+      <label for="subgroup">Subgroup:</label>
+      <input type="text" id="subgroup">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="collectedQuantity">
+      <label for="warehouseLocation">Warehouse Location:</label>
+      <input type="text" id="warehouseLocation">
+     
+      <div id="binLocationContainer"></div> <!-- Container for dynamic bin locations -->
+
+    <button type="button" id="saveProductBtn">Save Product</button>
+
+    </div>
+
+</div>
+<div class="ticker-container">
+    <div class="ticker-content" id="tickerContent">
+  
+  <h2>Latest Incoming Products</h2>
+  <ul id="incomingProductsList">
+    <!-- Dynamic list items will be added here -->
+  </ul>
+</div>
+
+  </div>
+
+  <script src="inventory 2.js"></script>
+</body>
+</html>

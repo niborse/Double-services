@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power BI-like Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard">
+    <header>
+      <h1>Inventory, Sales, and Purchases Dashboard</h1>
+    </header>
+    
+    <div class="summary-cards">
+        <div>Total Inventory: <span id="inventory-total">0</span></div>
+        <div>Total Sales: <span id="sales-total">0</span></div>
+        <div>Total Purchases: <span id="purchases-total">0</span></div>
+        </div>
+
+        <div>
+        <input type="text" id="search" placeholder="Filter by Product ID" oninput="filterTables()" />
+        </div>
+
+        <h3>Inventory</h3>
+        <table id="inventory-table">
+        <thead>
+            <tr>
+            <th>Product ID</th>
+            <th>Quantity</th>
+            <th>Bin Location</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        </table>
+
+        <h3>Sales Orders</h3>
+        <table id="sales-table">
+        <thead>
+            <tr>
+            <th>Order Number</th>
+            <th>Product ID</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        </table>
+
+        <h3>Purchase Orders</h3>
+        <table id="purchases-table">
+        <thead>
+            <tr>
+            <th>Order Number</th>
+            <th>Product ID</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        </table>
+  <script src="dashboard.js"></script>
+</body>
+</html>

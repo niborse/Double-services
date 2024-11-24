@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> NB Supply Chain </title>
+    <link rel="stylesheet" href="index.css"> <!-- Include your CSS file here -->
+    
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            
+          <div class="nav-left">
+            <img src="images/2.jpg">
+            <ul>
+              <li><a href="website.html">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+              <li class="dropdown"  onmouseout="hideDropdown()" onmouseover="showDropdown()">
+                <a href="#services">Services</a>
+                <ul class="dropdown-content" id="servicesDropdown">
+
+                    <li><a href="signin.html">POS</a></li>  
+                    <li><a href="inventory system/inventorywebsite.html">Inventory</a></li>
+                  <li><a href="warehouse.html"">Warehouse</a></li>
+                  <li><a href="warehouse.html">Transportation</a></li>
+                  
+                  
+                 
+                </ul>
+
+              </li>
+        
+            </ul>
+          </div>
+          <div class="nav-right">
+            <li class="search-bar">
+              <input type="text" placeholder="Search">
+            </li>
+          </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <h2>Welcome to our website</h2>
+            
+        </section>
+
+
+        <div class="intro">
+            
+            <h1 class="intro-text">It's time to make your supply chain more efficient.</h1>
+        
+            <p class="aim">with NB Supply Chain</p>
+            <p class="aim">Transform your business with us.</p>
+
+
+        </div>
+        
+
+        
+
+        <section id="about">
+            
+            
+            <div style="display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
+                <!-- Text Section -->
+                <div style="flex: 1; min-width: 300px;">
+                    <h2>About Us</h2>
+                    <p>
+                At NB Supply Chain, we specialize in delivering a comprehensive range of supply chain solutions, including Point of Sale (POS) systems, inventory management systems, warehouse services, and transportation management. Guided by the principles of innovation and efficiency, we leverage the latest and brightest technology to create integrated supply chain systems that streamline operations, save time, and maximize productivity.
+
+Our services draw inspiration from the incredible world of ants—nature’s finest collaborators and problem solvers. Like leafcutter ants, we carry the weight of your supply chain challenges to transform them into actionable growth opportunities. With the precision and speed of trap jaw ants, our technology ensures your operations are seamless and responsive. Together, we aim to forge pathways of success that are as resilient and adaptive as an army ant colony.
+</p>
+</div>
+
+<!-- Photo Section -->
+<div style="flex: 0.7; min-width: 300px; min-height: 100px;">
+    <img src="images/first.webp"  style="max-width: 100%;  border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+</div>
+</div>
+</section>
+
+<section id="mission">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin: 20px 0;">
+        <!-- Photo Section -->
+        <div style="flex: 1; min-width: 300px; text-align: center;">
+            <img src="images/mission.jpeg" alt="Mission" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+        </div>
+    <!-- Text Section -->
+    <div style="flex: 1.2; min-width: 300px;">
+        <h2 >Our Mission</h2>
+        <p>
+            Our mission is to empower businesses with innovative tools that optimize their supply chain operations. 
+            By offering user-friendly and intelligent platforms, we help businesses manage inventory, track sales trends, 
+            enhance warehouse efficiency, and streamline transportation. We are dedicated to delivering solutions that 
+            not only simplify processes but also drive collaboration, speed, and strength, much like the teamwork of bullet ants in the wild.
+        </p>
+    </div>
+</div>
+</section>
+    
+        <section id="vision">
+            <div style="display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
+                <!-- Text Section -->
+                <div style="flex: 1; min-width: 300px;">
+                <h2>Our Vision</h2>
+                <p>
+                    We envision a future where supply chain management is as seamless and effective as the natural ecosystems that inspire us. Our goal is to become a global leader in integrated supply chain solutions, creating a world where businesses can operate with the power of bulldog ants—bold, adaptive, and unstoppable. By merging cutting-edge technology with intuitive design, we aim to unlock the full potential of businesses, making them as efficient and resilient as an ant colony in action.
+                </p>
+            </div>
+            
+            <!-- Photo Section -->
+            <div style="flex: 0.7; min-width: 300px; min-height: 100px;">
+                <img src="images/Vision.jpeg"  style="max-width: 100%;  border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+            </div>
+            </div>
+            </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul class="services-list">
+                <li><a href="warehouse.html">Warehouse</a></li>
+                <li><a href="warehouse.html">Transportation</a></li>
+                <li><a href="inventory system/inventorywebsite.html">Inventory</a></li>
+                <li><a href="signin.html">POS</a></li>
+            </ul>
+        </section>
+        
+    </main>
+    <script>
+        function showDropdown() {
+            var dropdownContent = document.getElementById("servicesDropdown");
+            dropdownContent.style.display = "block";
+        }
+
+        function hideDropdown() {
+            var dropdownContent = document.getElementById("servicesDropdown");
+            dropdownContent.style.display = "none";
+        }
+        // JavaScript for slide-in effect
+        document.addEventListener("DOMContentLoaded", function () {
+            const slideInElements = document.querySelectorAll(".slide-in");
+
+            const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add("appear");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -100px 0px"
+            });
+
+            slideInElements.forEach(element => {
+                appearOnScroll.observe(element);
+            });
+        });
+
+    
+        
+    </script>
+
+    
+</body>
+</html>
