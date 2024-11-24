@@ -1,28 +1,19 @@
-document.getElementById('purchaseForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const productId = document.getElementById('productId').value;
-    const quantity = document.getElementById('quantity').value;
-    const location = document.getElementById('location').value;
-    const binLocation = document.getElementById('binLocation').value;
-    
-    // Handle purchase order submission logic here
-    console.log('Purchase Order Submitted:', { productId, quantity, location, binLocation });
-});
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const purchaseOrderRoutes = require('./routes/purchaseOrderRoutes');
 
-document.getElementById('rawMaterialOutForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const projectId = document.getElementById('projectId').value;
-    const outQuantity = document.getElementById('outQuantity').value;
-    
-    // Handle raw material out logic here
-    console.log('Raw Material Out Submitted:', { projectId, outQuantity });
-});
+const app = express();
+const port = process.env.PORT || 3007;
 
-document.getElementById('batchManagementForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const batchId = document.getElementById('batchId').value;
-    const batchQuantity = document.getElementById('batchQuantity').value;
-    
-    // Handle batch management logic here
-    console.log('Batch Added:', { batchId, batchQuantity });
+app.use(cors());
+app.use(bodyParser.json());
+
+mongoose.connect('mongodb+srv://nvborse1812:Iloveworkinginthecontrolroom@cluster1.tqaxbvl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1', { useNewUrlParser: true, useUnifiedTopology: true });
+
+app.use('/api', purchaseOrderRoutes);
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });
