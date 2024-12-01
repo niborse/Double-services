@@ -18,13 +18,15 @@ document.addEventListener("DOMContentLoaded", function() {
             if (item.collectedProducts && item.collectedProducts.length > 0) {
                 item.collectedProducts.forEach((product, productIndex) => {
                     const binLocations = product.binLocations || [];
+                    const totalBinQuantity = binLocations.reduce((total, bin) => total + (bin.binQuantity || 0), 0);
+
 
                     const mainRow = `
                         <tr>
                             <td rowspan="${binLocations.length + 1}">${product.productId}</td>
                             <td rowspan="${binLocations.length + 1}">${product.group}</td>
                             <td rowspan="${binLocations.length + 1}">${product.subgroup}</td>
-                            <td rowspan="${binLocations.length + 1}">${product.availableQuantity}</td>
+                            <td rowspan="${binLocations.length + 1}">${totalBinQuantity}</td>
                             <td rowspan="${binLocations.length + 1}">${product.location}</td>
                         </tr>
                     `;
